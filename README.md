@@ -1,6 +1,6 @@
 # qwen3vl_test
 ## 拉容器
-行内平台已经基于镜像创建容器的话忽略这一步，注意修改容器名和镜像
+行内平台已经基于镜像创建容器的话忽略这一步，注意修改容器名和镜像 
 docker run -itd -u 0  --ipc=host  --privileged --name h00875519_qwen3vl \
  --net=host \
  --shm-size=500g \
@@ -59,7 +59,7 @@ curl http://localhost:8891/v1/chat/completions \
     }'
 ```
 
-原始提示词，注意修改model参数和url参数
+原始提示词，注意修改model参数和url参数 
 ```
 curl -w '\nTTFT: %{time_starttransfer}s\nTotal: %{time_total}s\n' \
     http://localhost:8891/v1/chat/completions \
@@ -77,8 +77,8 @@ curl -w '\nTTFT: %{time_starttransfer}s\nTotal: %{time_total}s\n' \
 ```
 
 ## 压测
-压测脚本用的是原始提示词，可以修改脚本更换提示词
-压测脚本用的是同一张图片，如果项贴近真实业务场景可以用多张图片
+压测脚本用的是原始提示词，可以修改脚本更换提示词 
+压测脚本用的是同一张图片，如果项贴近真实业务场景可以用多张图片 
 单请求
 ```
 python bench_invoice.py single
